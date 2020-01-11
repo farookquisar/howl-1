@@ -58,7 +58,7 @@ Player.prototype = {
         src: [ data.file + '.webm',  data.file + '.mp3'],
         html5: true, // Force to HTML5 so that the audio can stream in (best for large files).
         onplay: function() {
-          // Display the duration.
+          // Display the duration. 
           duration.innerHTML = self.formatTime(Math.round(sound.duration()));
 
           // Start upating the progress of the track.
