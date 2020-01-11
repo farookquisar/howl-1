@@ -273,17 +273,17 @@ Player.prototype = {
 var player = new Player([
   {
     title: 'Rave Digger',
-    file: 'rave_digger',
+    file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017001',
     howl: null
   },
   {
     title: '80s Vibe',
-    file: '80s_vibe',
+    file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017001',
     howl: null
   },
   {
     title: 'Running Out',
-    file: 'running_out',
+    file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017001',
     howl: null
   }
 ]);
