@@ -3,18 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="user-scalable=no">
-  <title>Howler.js Audio Player</title>
+  <title>Quran Audio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <!-- Top Info -->
+  <div class="row justify-content-center">
   <div id="title">
     <span id="track"></span>
     <div id="timer">0:00</div>
     <div id="duration">0:00</div>
   </div>
+  </div>
 
   <!-- Controls -->
+  <div class="row justify-content-center">
   <div class="controlsOuter">
     <div class="controlsInner">
       <div id="loading"></div>
@@ -26,6 +31,31 @@
     <div class="btn" id="playlistBtn"></div>
     <div class="btn" id="volumeBtn"></div>
   </div>
+  </div>
+
+  <!-- Sura/Aya Selection -->
+  <section id-"surahSelection" >
+  <div class="row justify-content-center">
+
+        <div class="form-row ">
+          <div class="col">
+            <input type="text" id=surah class="form-control mt-3" placeholder="Surah Number">
+          </div>
+          <div class="col">
+            <input type="text" id=ayaFrm class="form-control mt-3" placeholder="Aya From">
+          </div>
+          <div class="col">
+            <input type="text" id=ayaTo class="form-control mt-3" placeholder="Aya To">
+          </div>
+
+          <div class="col">
+            <input type="button" class="btn btn-primary mt-3" name="submit" value="Submit" onclick="startQurAudio()">
+          </div>
+        </div>
+    </div>
+    </section>
+
+
 
   <!-- Progress -->
   <div id="waveform"></div>
