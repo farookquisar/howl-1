@@ -30,6 +30,7 @@ var Player = function(playlist) {
   //frktrack.innerHTML = '1. ' + playlist[0].title;
   track.innerHTML =  playlist[0].title;
 
+
   // Setup the playlist display.
   playlist.forEach(function(song) {
     var div = document.createElement('div');
@@ -106,7 +107,8 @@ Player.prototype = {
     sound.play();
 
     // Update the track display.
-    track.innerHTML = (index + 1) + '. ' + data.title;
+    //frktrack.innerHTML = (index + 1) + '. ' + data.title;
+    track.innerHTML =  data.title;
 
     // Show the pause button.
     if (sound.state() === 'loaded') {
@@ -273,83 +275,6 @@ Player.prototype = {
   }
 };
 
-// Setup our new audio player class and pass it the playlist.
-//var player =[];
-//  player = new Player([
-//   {
-//     title: '11Rave Digger',
-//     file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017002',
-//     howl: null
-//   },
-//   {
-//     title: '80s Vibe',
-//     file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017003',
-//     howl: null
-//   }
-// ]);
-
-
-
-// var player =new Player([{
-//   title: '80s Vibe-1',
-//   file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017002',
-//   howl: null}]
-// );
-//
-// player =new Player([{
-//   title: '80s Vibe-2',
-//   file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017003',
-//   howl: null}]
-// );
-//
-// player.push( [ '80s Vibe-2', 'https://download.quranicaudio.com/verses/Alafasy/mp3/017003', 'n'] );
-
-
-//var arr = new Array;
-/*
-   *******************************************
-   ORIGINAL-B
-   *******************************************
-*/
-// var player = new Player([{
-//     title: '80s Vibe-1',
-//     file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017002',
-//     howl: null
-//   }]);
-
-  /*
-   *******************************************
-   ORIGINAL-E
-   *******************************************
-let
-
-*/
-
-// var player = new Player([{
-//     title: '80s Vibe-1',
-//     file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017002',
-//     howl: null
-//   }]);
-
-// var player = new Player([{
-//     title: '1',
-//     file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017002',
-//     howl: null
-//   }]);
-//
-//
-//
-//   player.playlist[1]={title: '2',
-//   file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017003',
-//   howl: null};
-//
-//   player.playlist[2]={title: '3',
-//   file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017004',
-//   howl: null};
-//
-//   player.playlist.push=({title: '4',
-//   file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017005',
-//   howl: null});
 
   vSurah =document.getElementById("surah").value;
   vAyaFrm =document.getElementById("ayaFrm").value;
@@ -359,10 +284,11 @@ let
   vAyaToPad=vAyaTo.padStart(3,'0');
   vCurAyaPad=vAyaFrmPad;
   vCntr =0;
+  vReciter=document.getElementById("reciterlist").value;
 
   var player = new Player([{
-      title: 'Surah:'+vSurah+'  Ayah:'+vAyaFrm,
-      file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/'+vSurPad+vCurAyaPad,
+      title: vSurah+' : '+vAyaFrm,
+      file: 'https://download.quranicaudio.com/verses/'+vReciter+'/mp3/'+vSurPad+vCurAyaPad,
       howl: null
     }]);
 
@@ -371,187 +297,15 @@ let
       for (var i = parseInt(vAyaFrm)+1; i <= vAyaTo; i++) {
         vCntr++;
         vCurAyaPad=(i+"").padStart(3,'0');
-        console.log(vCurAyaPad);
+        //console.log(vCurAyaPad);
 
-        player.playlist[vCntr]={title: 'Surah:'+vSurah+'  Ayah:'+vAyaFrm,
-        file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/'+vSurPad+vCurAyaPad,
+        player.playlist[vCntr]={title: vSurah+' : '+i,
+        file: 'https://download.quranicaudio.com/verses/'+vReciter+'/mp3/'+vSurPad+vCurAyaPad,
         howl: null};
       }
     }
 
-  // player.push = new playlist([{
-  //     title: '3',
-  //     file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017004',
-  //     howl: null
-  //   }]);
 
-
-//console.log(player);
-
-//var e1 = makeEmployees(5)
-//var e2 = makeEmployeesObj(5)
-
-//console.log(e1)
-//console.log(e2)
-
-// var player = new Player([{
-//     title: 'aya-1',
-//     file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017002',
-//     howl: null
-//   }]);
-
-
-
-
-
-
-//player=[{title:'df',file:'f',howl:null}];
-//player['title']='title';
-//player['file']='https://download.quranicaudio.com/verses/Alafasy/mp3/017003';
-//player["howl"]=null;
-
-
-
-
-
-// var player={};
-//  player = new Player([{title: '80s Vibe-1',
-//       file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017002',
-//       howl: null}]);
-//
-//       player.push = new Player([{title: '80s Vibe-2',
-//            file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017003',
-//            howl: null}]);
-
-
-    //var player=new Player([{title: 'John',file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017003' , howl:null}]);
-
-    //player[0]=new Player({title: 'John-2',file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017004' , howl:null});
-  //  player[1]={title: 'John-2',file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017004' , howl:null};
-     //player=new Player({title: 'John1',file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017004' , howl:null});
-    // player=new Player({title: 'John2',file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017005' , howl:null});
-    //  player=[{title: 'John',file: '30' , howl:null}];
-    //  player=[{title: 'John',file: '30' , howl:null}];
-
-
-
-
-// player[title]='l';
-// player[file]='l';
-// player[howl]=null;
-
-
- // ([
- //
- //   {title:'f',  file:'f', howl:null}
- // ]);
- //
- // player.push(new Player([
- //
- //   {title:'f',  file:'f', howl:null}
- //
- // ]));
-//player["title"]='title';
-//player["file"]='title';
-//player["howl"]='title';
-
-// player.title[0]='f';
-// player.file[0]='f';
-// player.howl[0]=null;
-//
-// player.title[1]='f';
-// player.file[1]='f';
-// player.howl[1]=null;
-//var player ={"title":'1',"file":'1',"howl":'1'};
-
-
-//arr.push(obj);
-
-
-//console.log(objectName['key1'][0][0]) //string1
-
-
-//console.log(arr); // Output => [{stop: 'step1', number: 99}]
-
-// player.push =new Player([{
-//   title: '80s Vibe-2',
-//   file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017003',
-//   howl: null}]
-// );
-//
-// player.push (new Player([{
-//   title: '80s Vibe-3',
-//   file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017004',
-//   howl: null}]
-// )
-
-
-// player[1] =new Player(
-//   title: '80s Vibe',
-//   file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017003',
-//   howl: null
-// );
-
-/*--------------------------
-
-sound_files.push(new Howl({
-  src: ['http://download.quranicaudio.com/verses/Alafasy/mp3/'+vSurPad+gCurAyaPad+'.mp3'],
-  loop: false
-}));
-
-,
-  [new Howl({
-      src: ['http://download.quranicaudio.com/verses/Sudais/mp3/001001.mp3'],
-      loop: false
-    })
-    new Howl({
-      src: ['http://download.quranicaudio.com/verses/Sudais/mp3/001002.mp3'],
-      loop: false
-    }),
-    new Howl({
-      src: ['http://download.quranicaudio.com/verses/Sudais/mp3/001003.mp3'],
-      loop: false
-    }),
-    new Howl({
-      src: ['http://download.quranicaudio.com/verses/Sudais/mp3/001004.mp3'],
-      loop: false
-    }),
-    new Howl({
-      src: ['http://download.quranicaudio.com/verses/Sudais/mp3/001005.mp3'],
-      loop: false
-    })
-  ];
-
-for (var i = vAyaFrm; i <=vAyaTo; i++) {
-
-  gCurAyaPad=(i+"").padStart(3,'0');
-
-
-
-  sound_files.push(new Howl({
-    src: ['http://download.quranicaudio.com/verses/Alafasy/mp3/'+vSurPad+gCurAyaPad+'.mp3'],
-    loop: false
-  }));
-
-
-}
-*/
-
-// player[3]=new Player([
-//   {
-//     title: '4 aaya',
-//     file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017004',
-//     howl: null
-//   }]);
-
-  // for (var i = 3; i <=5; i++) {
-  //   player[i]=new Player([
-  //     {
-  //       title: i+""+' aaya',
-  //       file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/017004',
-  //       howl: null
-  //     }]);
-  // }
 
 // Bind our player controls.
 playBtn.addEventListener('click', function() {
@@ -650,4 +404,6 @@ var resize = function() {
 };
 window.addEventListener('resize', resize);
 resize();
+
+//player.play();
 }
