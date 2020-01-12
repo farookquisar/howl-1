@@ -27,7 +27,8 @@ var Player = function(playlist) {
   this.index = 0;
 
   // Display the title of the first track.
-  track.innerHTML = '1. ' + playlist[0].title;
+  //frktrack.innerHTML = '1. ' + playlist[0].title;
+  track.innerHTML =  playlist[0].title;
 
   // Setup the playlist display.
   playlist.forEach(function(song) {
@@ -357,7 +358,7 @@ let
   vAyaFrmPad=vAyaFrm.padStart(3,'0');
   vAyaToPad=vAyaTo.padStart(3,'0');
   vCurAyaPad=vAyaFrmPad;
-  vCntr =1;
+  vCntr =0;
 
   var player = new Player([{
       title: 'Surah:'+vSurah+'  Ayah:'+vAyaFrm,
@@ -385,7 +386,7 @@ let
   //   }]);
 
 
-console.log(player);
+//console.log(player);
 
 //var e1 = makeEmployees(5)
 //var e2 = makeEmployeesObj(5)
