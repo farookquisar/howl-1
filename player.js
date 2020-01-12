@@ -357,6 +357,7 @@ let
   vAyaFrmPad=vAyaFrm.padStart(3,'0');
   vAyaToPad=vAyaTo.padStart(3,'0');
   vCurAyaPad=vAyaFrmPad;
+  vCntr =1;
 
   var player = new Player([{
       title: 'Surah:'+vSurah+'  Ayah:'+vAyaFrm,
@@ -367,10 +368,11 @@ let
     if (vAyaTo!=vAyaFrm && vAyaTo>vAyaFrm) {
 
       for (var i = parseInt(vAyaFrm)+1; i <= vAyaTo; i++) {
+        vCntr++;
         vCurAyaPad=(i+"").padStart(3,'0');
         console.log(vCurAyaPad);
 
-        player.playlist[1]={title: '3',
+        player.playlist[vCntr]={title: 'Surah:'+vSurah+'  Ayah:'+vAyaFrm,
         file: 'https://download.quranicaudio.com/verses/Alafasy/mp3/'+vSurPad+vCurAyaPad,
         howl: null};
       }

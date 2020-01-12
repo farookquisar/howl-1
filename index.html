@@ -19,6 +19,7 @@
   </div>
 
   <!-- Controls -->
+
   <div class="row justify-content-center">
   <div class="controlsOuter">
     <div class="controlsInner">
@@ -35,44 +36,59 @@
 
   <!-- Sura/Aya Selection -->
   <section id-"surahSelection" >
+    <div class="container-fluid">
   <div class="row justify-content-center">
-
         <div class="form-row ">
           <div class="col">
-            <input type="text" id=surah class="form-control mt-3" placeholder="Surah Number">
+            <input type="text" id=surah class="form-control mt-5" placeholder="Surah Number">
           </div>
           <div class="col">
-            <input type="text" id=ayaFrm class="form-control mt-3" placeholder="Aya From">
+            <input type="text" id=ayaFrm class="form-control mt-5" placeholder="Aya From">
           </div>
           <div class="col">
-            <input type="text" id=ayaTo class="form-control mt-3" placeholder="Aya To">
+            <input type="text" id=ayaTo class="form-control mt-5" placeholder="Aya To">
           </div>
 
           <div class="col">
-            <input type="button" class="btn btn-primary mt-3" name="submit" value="Submit" onclick="startQurAudio()">
+            <input type="button" class="btn btn-primary mt-5" name="submit" value="Submit" onclick="startQurAudio()">
           </div>
         </div>
+    </div>
     </div>
     </section>
 
 
 
+
+
+
+
+
+
+
+
   <!-- Progress -->
+  <section>
   <div id="waveform"></div>
   <div id="bar"></div>
   <div id="progress"></div>
+  </section>
 
   <!-- Playlist -->
+  <section>
   <div id="playlist">
     <div id="list"></div>
   </div>
+  </section>
 
   <!-- Volume -->
+  <section>
   <div id="volume" class="fadeout">
     <div id="barFull" class="bar"></div>
     <div id="barEmpty" class="bar"></div>
     <div id="sliderBtn"></div>
   </div>
+</section>
 
   <!-- Scripts -->
   <script src="src/howler.core.js"></script>
